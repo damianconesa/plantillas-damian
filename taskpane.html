@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plantillas para Damián</title>
+  <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+  <main id="app">
+    <header class="cabecera">
+      <h1>Escribir a Damián</h1>
+      <p>Elige el tipo de solicitud y rellena los datos. Se añadirán al correo y podrás revisarlo antes de enviar.</p>
+    </header>
+
+    <section id="vista-lista" aria-label="Plantillas disponibles">
+      <div id="lista-plantillas" class="lista"></div>
+    </section>
+
+    <section id="vista-form" hidden>
+      <button type="button" id="btn-volver" class="enlace">← Cambiar de plantilla</button>
+      <h2 id="form-titulo"></h2>
+      <form id="formulario" novalidate>
+        <div id="campos"></div>
+        <p id="aviso-error" class="error" role="alert" hidden></p>
+        <button type="submit" id="btn-insertar" class="primario">Añadir al correo</button>
+      </form>
+    </section>
+
+    <section id="vista-ok" hidden>
+      <div class="ok">
+        <strong>Listo.</strong>
+        <p id="ok-texto">Revisa el correo y envíalo cuando quieras.</p>
+      </div>
+      <button type="button" id="btn-otra" class="enlace">Usar otra plantilla</button>
+    </section>
+  </main>
+
+  <script src="plantillas.js"></script>
+  <script src="taskpane.js"></script>
+</body>
+</html>
